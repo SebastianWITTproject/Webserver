@@ -1,0 +1,105 @@
+server{
+	server_name 	 	nom;
+	listen 				8080;
+	root ./root/server1;
+	default	index.html;
+	protocol	GET;
+	host	0.0.0.0;
+	body_size 1000000;
+	{
+		location /;
+		methods GET POST;
+		root ./root/server1;
+		cgi on;
+		default index.html;
+	}
+	{
+		location /2/;
+		methods GET POST;
+		root ./root/server2;
+		default index.html;
+		cgi on;
+	}
+	{
+		location /3/;
+		methods GET POST;
+		root ./root/server3;
+		cgi on;
+	}
+	{
+		location /4/;
+		methods GET POST;
+		root ./root/server4;
+		cgi on;
+	}
+}
+
+server{
+	server_name 	 	deuxieme;
+	listen 				8081;
+	root ./root/server2;
+	default	index.html;
+	protocol	GET POST;
+	host	0.0.0.0;
+	{
+		location /;
+		methods GET POST;
+		root ./root/server2;
+		autoindex on;
+		upload_path  ./root/server1/upload;
+	}
+	{
+		location /cgi/;
+		methods GET POST;
+		root ./root/server1;
+		autoindex on;
+		cgi on;
+	}
+}
+
+server{
+	server_name 	 	nom;
+	listen 				8082;
+	root ./root/server3;
+	default	index.html;
+	protocol	GET POST;
+	host	0.0.0.0;
+	{
+		redirection https://www.youtube.com;
+		location /;
+		methods GET POST;
+		root ./root/server3;
+		autoindex on;
+		upload_path /upload;
+	}
+	{
+		location /cgi/;
+		methods GET POST;
+		root ./root/server1;
+		autoindex on;
+		cgi on;
+	}
+}
+
+server{
+	server_name 	 	nom;
+	listen 				8083;
+	root ./root/server4;
+	default	index.html;
+	protocol	GET POST;
+	host	0.0.0.0;
+	{
+		location /;
+		methods GET POST;
+		root ./root/server4;
+		autoindex on;
+		upload_path  ./root/server1/upload;
+	}
+	{
+		location /cgi/;
+		methods GET POST;
+		root ./root/server1;
+		autoindex on;
+		cgi on;
+	}
+}
