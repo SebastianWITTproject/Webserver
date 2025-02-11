@@ -1,17 +1,20 @@
 ### Overview ###
 
-Transcendance is a full-stack web application that provides users with an interactive online gaming experience by implementing the classic Pong game with modern features. It is designed as part of the 42 school curriculum, focusing on web technologies, authentication, and real-time interactions.
+Webserv is a HTTP server written in C++. It handles multiple client connections efficiently using poll() and supports essential web server features like static file hosting, CGI execution, and HTTP request handling.
+This server handles the HTTP/1.1 protocol, managing requests, responses, and connections in accordance with the protocol.
+This application features a configuration file inspired by NGINX, allowing users to define server settings, routes, and CGI execution rules.
 
 ### Features ###
 
-- ✅ User Authentication – OAuth2 (42 API) and Two-Factor Authentication (2FA)
-- ✅ Real-time Multiplayer Pong Game – Play 2v2 or 4v4
-- ✅ Local tournament with matchmaking features
-- ✅ User Profiles – Customizable profiles with avatars, username
-- ✅ Leaderboard that updates after multiplayer games
-- ✅ Add friends and track their online connection with sockets
-- ✅ View user win and match history
-- ✅ Security features such as JWT token and user input sanitization
+- ✅ **HTTP/1.1 Protocol Support**
+- ✅ **Multiple connection handling with `poll()`** for multiplexing
+- ✅ **Handles GET, POST, DELETE methods**
+- ✅ **Static File Hosting**
+- ✅ **Supports file upload with option for multiple upload at the same time**
+- ✅ **CGI Execution**
+- ✅ **Config file for server settings, custom routes**
+- ✅ **Custom Error Pages**
+- ✅ **Directory Listing**
 
 ### Config file usage ###
 
@@ -58,4 +61,3 @@ With arguments for a custom .cf file as follow:
 ```
 ./server <path_to_custom_config_file>
 ```
-
