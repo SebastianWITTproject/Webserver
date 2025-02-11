@@ -6,4 +6,13 @@ This application features a configuration file inspired by NGINX, allowing users
 
 ### Features ###
 
+- ✅ **HTTP/1.1 Protocol Support**
+- ✅ **Multiple connection handling with `poll()`** for multiplexing
+- ✅ **Handles GET, POST, DELETE methods**
+- ✅ **Static File Hosting**
+- ✅ **Supports file upload with option for multiple upload at the same time**
+- ✅ **CGI Execution**
+- ✅ **Config file for server settings, custom routes**
+- ✅ **Custom Error Pages**
+- ✅ **Directory Listing**
 
