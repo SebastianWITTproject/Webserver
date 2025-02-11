@@ -16,3 +16,49 @@ This application features a configuration file inspired by NGINX, allowing users
 - ✅ **Custom Error Pages**
 - ✅ **Directory Listing**
 
+### Config file usage ###
+
+```conf
+server {
+    server_name     <name>;
+    listen           <port>;
+    root             <root directory>;
+    default          <default file>;
+    protocol         <allowed methods>;
+    host             <IP address>;
+
+    # Location blocks for different URL paths
+    location / {
+        methods <allowed methods>;
+        root <root directory>;
+        cgi <on/off>;
+        autoindex <on/off>;
+        upload_path <upload directory>;
+    }
+    
+    # Additional location blocks for different paths (e.g., /cgi/)
+}
+```
+### How to run the project
+
+### 1. Clone the Repository
+To get started, clone the Webserv repository to your local machine:
+```bash
+git clone <repository_url>
+cd <repository_directory>
+```
+### 2. Build the project
+
+Compile using the command make
+
+### 3. Run the server
+
+Without arguments will take the config.cf file:
+```
+./server
+```
+With arguments for a custom .cf file as follow:
+```
+./server <path_to_custom_config_file>
+```
+
