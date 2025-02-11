@@ -4,14 +4,14 @@ Transcendance is a full-stack web application that provides users with an intera
 
 ### Features ###
 
-✅ User Authentication – OAuth2 (42 API) and Two-Factor Authentication (2FA)
-✅ Real-time Multiplayer Pong Game – Play 2v2 or 4v4
-✅ Local tournament with matchmaking features
-✅ User Profiles – Customizable profiles with avatars, username
-✅ Leaderboard that updates after multiplayer games
-✅ Add friends and track their online connection with sockets
-✅ View user win and match history
-✅ Security features such as JWT token and user input sanitization
+- ✅ User Authentication – OAuth2 (42 API) and Two-Factor Authentication (2FA)
+- ✅ Real-time Multiplayer Pong Game – Play 2v2 or 4v4
+- ✅ Local tournament with matchmaking features
+- ✅ User Profiles – Customizable profiles with avatars, username
+- ✅ Leaderboard that updates after multiplayer games
+- ✅ Add friends and track their online connection with sockets
+- ✅ View user win and match history
+- ✅ Security features such as JWT token and user input sanitization
 
 ### Config file usage ###
 
